@@ -17,17 +17,17 @@ void selection_sort(int *array, size_t size)
 	for (i = 0; i < size; i++)
 	{
 		unsigned int x = i;
-		int aux = array[i];
+		int temp = array[i];
 
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] < aux)
-				aux = array[j], x = j;
+			if (array[j] < temp)
+				temp = array[j], x = j;
 		}
 		if (x != i)
 		{
 			array[x] = array[i];
-			array[i] = aux;
+			array[i] = temp;
 			print_array(array, size);
 		}
 	}
